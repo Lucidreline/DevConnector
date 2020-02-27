@@ -5,6 +5,9 @@ const app = express()
 
 connectDB() //connect to database
 
+//middleware
+app.use(express.json({extended: false})); // gives us body parser functionality
+
 
 app.get('/', (req, res) => res.send('API running!'));
 
